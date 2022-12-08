@@ -20,7 +20,7 @@ const email = document.getElementById("email");
 const address = document.getElementById("address");
 const website = document.getElementById("vcard-link");
 vcardContent.style.display = "none";
-linkQRContent.style.display = "none";
+// linkQRContent.style.display = "none";
 let whatIsRevealed = "selection";
 
 function buttonClicked(e) {
@@ -62,6 +62,8 @@ function goTolinkQR() {
     heading.setAttribute("data-page", "link-QR");
     heading.textContent = "Link QR";
     smallLabel.removeAttribute("data-page");
+    imageQR.setAttribute("data-page", "link-QR");
+    goButton.setAttribute("data-page", "link-QR");
 }
 
 function goTovcard() {

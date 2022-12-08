@@ -13,14 +13,14 @@ body {
 
 .wrapper {
     background: #8dffc0;
-    height: 90vh;
-    width: 50vh;
+    height: auto;
+    width: 18em;
     margin: 0;
     border-radius: 13px;
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-rows: 0.4fr 0.6fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "qr-area"
         "content-area";
@@ -30,22 +30,28 @@ body {
 }
 
 .wrapper[data-page="vcard"] {
-    grid-template-rows: 0.3fr 0.7fr;
+    grid-template-rows: 0.25fr 0.75fr;
+    height: auto;
 }
 
 .sample-qr {
     height: 150px;
     width: 150px;
-    transform: scale(130%);
-    margin-top: 30px;
+    transform: scale(100%);
+    margin-top: 1.5em;
     grid-area: qr-area;
 }
 
 .sample-qr[data-page="vcard"] {
     margin-top: 20px;
+    margin-bottom: 0px;
     height: 150px;
     width: 150px;
-    transform: scale(100%)
+    transform: scale(80%)
+}
+
+.sample-qr[data-page="link-QR"] {
+    margin-bottom: 1em;
 }
 
 .content-wrapper {
@@ -61,17 +67,19 @@ body {
 }
 
 h1 {
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Poppins', sans-serif;
     align-self: start;
     text-align: center;
+
 }
 
 h1[data-page="selection"] {
-    margin-bottom: 65px;
+    margin-bottom: 1em;
 }
 
 h1[data-page="link-QR"] {
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
 }
 
 h1[data-page="vcard"] {
@@ -87,10 +95,11 @@ form[data-page="vcard"] {
     text-align: center;
     align-self: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 2em;
+    margin-bottom: 5em;
 }
 
 form[data-page="link-QR"] {
@@ -98,15 +107,16 @@ form[data-page="link-QR"] {
     text-align: center;
     align-self: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
-    margin-top: 40px;
+    margin-bottom: 2em;
+
 }
 
 form>* {
-    margin: 5px 10px 10px 10px;
+    margin: 1.3em;
+    transform: scale(120%);
 }
 
 .small-label {
@@ -125,19 +135,24 @@ form>* {
 
 .label {
     font-family: 'Exo 2', sans-serif;
-    margin: 0;
+    font-size: 0.8em;
+    color: rgb(73, 73, 73);
 }
 
 .label[data-page="selection"] {
     width: 100%;
+
     display: inline-block;
     text-align: center;
 }
 
+
+
 input {
     font-family: 'Open Sans', sans-serif;
-    height: 30px;
-    width: 200px;
+    font-size: xx-small;
+    height: 3em;
+    width: 18em;
     margin-top: 5px;
     padding-left: 10px;
     background-color: rgba(255, 255, 255, 0.23);
@@ -146,37 +161,71 @@ input {
 }
 
 .input-div {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.input-div[data-page="vcard"]>* {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 16em;
+    height: 2.5em;
+}
+
 
 button {
     font-family: 'Ubuntu', sans-serif;
+    font-size: 0.7em;
     color: white;
-    height: 30px;
-    width: 130px;
+    width: 9em;
+    padding: 0.7em;
+    margin-top: 1.2em;
     background-color: rgba(0, 85, 30, 0.67);
     border: 1px solid rgba(0, 85, 30, 0.67);
     border-radius: 8px;
     box-shadow: 3px 3px 3px 0px rgba(80, 80, 80, 0.75);
     -webkit-box-shadow: 3px 3px 3px 0px rgba(80, 80, 80, 0.75);
-    -moz-box-shadow: 3px 3px 3px 0px rgba(80, 80, 80, 0.75);
 }
 
 button[data-page="selection"] {
-    margin: 20px 50px 20px 50px;
-    width: 150px;
+    margin: 2em;
+    margin-bottom: 0;
+    width: 20em;
 }
+
+button[data-page="link-QR"] {
+    margin-top: 0px;
+}
+
+#go-button {
+    border-radius: 6px;
+}
+
+#link-QR-content {
+    display: none;
+}
+
+
 
 /* selection page */
 .selection-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2em;
 }
 
 /* selection page */
+
+
 @media only screen and (max-width: 1000px) {
     body {
-        background-size: auto;
+        background-size: 400%;
+        background-repeat: no-repeat;
     }
-}
+
+    .wrapper {
+        height: auto;
+    }

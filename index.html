@@ -13,13 +13,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2&family=Inspiration&family=Kdam+Thmor+Pro&family=Montserrat:ital@1&family=Open+Sans:ital,wght@1,300&family=Ubuntu:wght@500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper" data-page="">
         <img class="sample-qr" src="./assets/images/sample-qr.jpg" alt="" data-page="">
         <div class="content-wrapper">
-            <h1 data-page="selection">QR GENERATOR</h1>
+            <h1 data-page="selection">QR Generator</h1>
             <span class="small-label" data-page="">Enter your details below</span>
             <!-- only for selection -->
             <div id="selection-content">
@@ -32,7 +33,7 @@
             <!-- only for selection -->
             <!-- only for link-QR and vcard -->
             <form data-page="" id="myForm">
-                <div id="link-QR-content">
+                <div id="link-QR-content" data-page="">
                     <!-- <div class="input-div" data-page="link-QR">
                         <span class="label">Enter your name</span>
                         <input type="text" placeholder="nijinscode">
@@ -50,7 +51,7 @@
                     <input type="text" id="address" placeholder="Address" required>
                     <input type="url" id="vcard-link" placeholder="Your website or link">
                 </div>
-                <button id="go-button" type="submit">LET'S GO!</button>
+                <button id="go-button" type="submit" data-page="">Generate!</button>
             </form>
             <!-- only for link-QR and vcard -->
         </div>
