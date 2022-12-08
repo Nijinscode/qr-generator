@@ -52,7 +52,7 @@ function createQR(value) {
 
 function createVcard(firstname, lastname, email, mobile, website, address) {
     imageQR.setAttribute("src", `https://qrickit.com/api/qr.php?d=BEGIN%3aVCARD%0d%0aVERSION%3a3.0%0d%0aN%3a${encodeURIComponent(lastname)}%3b${encodeURIComponent(firstname)}%0d%0aEMAIL%3a${encodeURIComponent(email)}%0d%0aTEL%3bTYPE%3d
-CELL%3a${encodeURIComponent(mobile)}%0d%0aURL%3a${encodeURIComponent(website)}%0d%0aADR%3a%3b%3b${encodeURIComponent(lastname)}%0d%0aEND%3aVCARD%0A&addtext=&txtcolor=000000&fgdcolor=000000&bgdcolor=FFFFFF&qrsize=200`);
+CELL%3a${encodeURIComponent(mobile)}%0d%0aURL%3a${encodeURIComponent(website)}%0d%0aADR%3a%3b%3b${encodeURIComponent(address)}%0d%0aEND%3aVCARD%0A&addtext=&txtcolor=000000&fgdcolor=000000&bgdcolor=FFFFFF&qrsize=200`);
 }
 
 function goTolinkQR() {
